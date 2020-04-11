@@ -17,7 +17,7 @@ namespace Leave_Management.Models
         public EmployeeViewModel Employee { get; set; }
         public string EmployeeId { get; set; }
 
-        public DetailsLeaveTypeViewModel LeaveType { get; set; }
+        public LeaveTypeViewModel LeaveType { get; set; }
         public int LeaveTypeId { get; set; }
 
         public IEnumerable<SelectListItem> Emplyoees { get; set; }
