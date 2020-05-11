@@ -9,39 +9,39 @@ using System.Threading.Tasks;
 
 namespace Leave_Management.Models
 {
-    public class LeaveAllocationViewModel
+    public class LeaveAllocationVM
     {
         public int Id { get; set; }
         public int NumberOfDays { get; set; }
         public DateTime DateCreated { get; set; }
         public int Period { get; set; }
 
-        public EmployeeViewModel Employee { get; set; }
+        public EmployeeVM Employee { get; set; }
         public string EmployeeId { get; set; }
 
-        public LeaveTypeViewModel LeaveType { get; set; }
+        public LeaveTypeVM LeaveType { get; set; }
         public int LeaveTypeId { get; set; }
     }
 
-    public class CreateLeaveAllocationViewModel
+    public class CreateLeaveAllocationVM
     {
         public int NumberUpdated { get; set; }
-        public List<LeaveTypeViewModel> LeaveTypes { get; set; }
+        public List<LeaveTypeVM> LeaveTypes { get; set; }
     }
 
-    public class ViewAllocationsViewModel
+    public class ViewAllocationsVM
     {
-        public EmployeeViewModel Employee { get; set; }
+        public EmployeeVM Employee { get; set; }
 
         public string EmployeeID { get; set; }
 
-        public List<LeaveAllocationViewModel> LeaveAllocations { get; set; }
+        public List<LeaveAllocationVM> LeaveAllocations { get; set; }
     }
 
-    public class EditLeaveAllocationViewModel
+    public class EditLeaveAllocationVM
     {
         public int Id { get; set; }
-        public EmployeeViewModel Employee { get; set; }
+        public EmployeeVM Employee { get; set; }
         public string EmployeeId { get; set; }
         public int NumberOfDays { get; set; }
         public LeaveType LeaveType { get; set; }

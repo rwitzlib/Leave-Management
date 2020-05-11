@@ -2,7 +2,7 @@ using System;
 
 namespace Leave_Management.Models
 {
-    public class ErrorViewModel
+    public class ErrorVM
     {
         public string RequestId { get; set; }
 

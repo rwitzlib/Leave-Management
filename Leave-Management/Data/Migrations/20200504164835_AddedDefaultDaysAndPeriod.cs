@@ -20,7 +20,7 @@ namespace Leave_Management.Data.Migrations
                 defaultValue: 0);
 
             migrationBuilder.CreateTable(
-                name: "DetailsLeaveTypeViewModel",
+                name: "DetailsLeaveTypeVM",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -30,14 +30,14 @@ namespace Leave_Management.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DetailsLeaveTypeViewModel", x => x.Id);
+                    table.PrimaryKey("PK_DetailsLeaveTypeVM", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "DetailsLeaveTypeViewModel");
+                name: "DetailsLeaveTypeVM");
 
             migrationBuilder.DropColumn(
                 name: "DefaultDays",

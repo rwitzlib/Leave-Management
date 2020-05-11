@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Leave_Management.Models
 {
-    public class LeaveTypeViewModel
+    public class LeaveTypeVM
     {
         public int Id { get; set; }
         [Required]
