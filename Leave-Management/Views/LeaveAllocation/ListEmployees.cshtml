@@ -2,12 +2,12 @@
 
 @{
     ViewData["Title"] = "ListEmployees";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_AdminLTE.cshtml";
 }
 
 <h1>List Employees</h1>
 
-<table id="tblData"class="table">
+<table id="tblData" class="table">
     <thead>
         <tr>
 
@@ -24,24 +24,33 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
 
-            <td>
-                <a class="btn btn-outline-success" asp-action="Details" asp-route-id="@item.Id">
-                    <i class="fa fa-search"></i> Details
-                </a>
-            </td>
-        </tr>
-}
+                <td>
+                    <a class="btn btn-outline-success" asp-action="Details" asp-route-id="@item.Id">
+                        <i class="fa fa-search"></i> Details
+                    </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+@section Scripts {
+    <script>
+    $(document).ready(function () {
+        $('#tblData').DataTable();
+    });
+    </script>
+}
